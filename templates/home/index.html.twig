@@ -1,0 +1,144 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Concess Cars{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+
+    <main class="site-wrapper">
+        <div class="pt-table desktop-768">
+            <div class="pt-tablecell page-home relative" style=" background-image: url(https://www.hdcarwallpapers.com/walls/audi_r8_green_hell_2021_4k_3-HD.jpg);
+    background-position: center;
+    background-size: cover;">
+                <div class="overlay"></div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                            <div class="page-title  home text-center">
+              <span class="heading-page"> Concess Cars, Make the better move </span>
+                                <p class="mt20">Concess car est un site de concessionaire professionnel.</p>
+                            </div>
+
+                            <div class="hexagon-menu clear">
+                                <div class="hexagon-item">
+                                    <div class="hex-item">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="hex-item">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <a href="{{ path ('home') }} " class="hex-content">
+                  <span class="hex-content-inner">
+                    <span class="icon">
+                      <i class="fa fa-universal-access"></i>
+                    </span>
+                    <span class="title">Welcome</span>
+                  </span>
+                                        <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="hexagon-item">
+                                    <div class="hex-item">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="hex-item">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <a href={{ path ('ajouter') }}  class="hex-content">
+                  <span class="hex-content-inner">
+                    <span class="icon">
+                      <i class="fa fa-bullseye"></i>
+                    </span>
+                    <span class="title">Ajouter</span>
+                  </span>
+
+                                        <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="hexagon-item">
+                                    <div class="hex-item">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="hex-item">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <a href={{ path ('contact') }} class="hex-content">
+                  <span class="hex-content-inner">
+                    <span class="icon">
+                      <i class="fa fa-map-signs"></i>
+                    </span>
+                    <span class="title">Contact</span>
+                  </span>
+                                        <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="flex flex-wrap ">
+    {% for voiture in voitures %}
+
+        <!--    <div >
+                <div class="card" style="width: 18rem;" >
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ voiture.marque }}</h5>
+                        <img src="img/logoCardsjpg.jpg" class="card-img-top" alt="...">
+                        <p class="card-text">Couleur du véhicule : {{ voiture.couleur }}</p>
+                        <p class="card-text">Type de véhicule : {{ voiture.getIdTypeVoiture().libelle }}</p>
+                        <a class="btn btn-primary" href={{ path ('edite', {id: voiture.id} ) }}>Editer</a>
+                        <a class="btn btn-primary" href={{ path('delete', {id: voiture.id}) }}>Supprimer</a>
+                    </div>
+
+                </div>
+            </div>
+-->
+
+    <div class="w-full  md:w-1/3 flex flex-col p-3">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col">
+            <div class="bg-cover h-48" style="width: 610px; height: 120px;  background-image: url(https://media.discordapp.net/attachments/890497663026479135/890873823535198228/Log_car_concess_fonce.jpg);"></div>
+            <div class="p-4 flex-1 flex flex-col" style="">
+                <h3 class="mb-4 text-2xl">{{ voiture.marque }}</h3>
+                <div class="mb-4 text-grey-darker text-sm flex-1">
+                    <p class="card-text">Couleur du véhicule : {{ voiture.couleur }}</p>
+                    <p class="card-text">Type de véhicule : {{ voiture.getIdTypeVoiture().libelle }}</p>
+                    <a class="btn btn-primary" href={{ path ('edite', {id: voiture.id} ) }}>Editer</a>
+                    <a class="btn btn-primary" href={{ path('delete', {id: voiture.id}) }}>Supprimer</a>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}

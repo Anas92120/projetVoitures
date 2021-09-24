@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <link>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle`
@@ -12,8 +12,51 @@
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/tailwindcss@%5E2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles.css"    >
+
+        {% block navbar %}
+
+
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
     </body>
+<footer>
+    <!-- component
+    <div class="w-full h-screen bg-gray-800 flex justify-center items-center">
+        <div class="container flex flex-col gap-4 mx-8">
+            <label class="text-gray-100 font-semibold tracking-wider text-lg">La semaine dernière des statistique t'as peur</label>
+            <div class="bg-gray-100 rounded-lg w-full h-auto py-4 flex flex-row justify-between divide-x divide-solid divide-gray-400">
+                <div class="relative flex-1 flex flex-col gap-2 px-4">
+                    <label class="text-gray-800 text-base font-semibold tracking-wider">Visiteurs total</label>
+                    <label class="text-green-800 text-4xl font-bold">14K</label>
+                    <div class="absolute bg-red-400 rounded-md font-semibold text-xs text-gray-100 p-2 right-4 bottom-0">
+                        - 1%
+                    </div>
+                </div>
+                <div class="relative flex-1 flex flex-col gap-2 px-4">
+                    <label class="text-gray-800 text-base font-semibold tracking-wider">Total de clics</label>
+                    <label class="text-green-800 text-4xl font-bold">6K</label>
+                    <div class="absolute bg-green-400 rounded-md font-semibold text-xs text-gray-100 p-2 right-4 bottom-0">
+                        + 20%
+                    </div>
+                </div>
+                <div class="relative flex-1 flex flex-col gap-2 px-4">
+                    <label class="text-gray-800 text-base font-semibold tracking-wider">Gains total</label>
+                    <label class="text-green-800 text-4xl font-bold">$700M</label>
+                    <div class="absolute bg-green-400 rounded-md font-semibold text-xs text-gray-100 p-2 right-4 bottom-0">
+                        + 15%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+    <footer class="p-4 bg-gray-400"></footer>
+</footer>
 </html>

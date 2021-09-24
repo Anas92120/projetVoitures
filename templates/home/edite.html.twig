@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Concess Cars{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+
+
+    {{ form_start(formEdite) }}
+
+
+    <div class="relative min-h-screen flex items-center justify-center bg-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center" style="background-image: url(https://www.hdcarwallpapers.com/walls/range_rover_velar_d200_r_dynamic_2021_5k_2-HD.jpg);">
+        <div class="container max-w-screen-lg mx-auto">
+            <div>
+
+                <div class="bg-white rounded-xl shadow-lg p-4 px-4 md:p-8 mb-6">
+                    <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+                        <div class="text-gray-600">
+                            <p class="font-medium text-lg">Modification du véhicule</p>
+                            <p>Modifier la couleur ainsi que la marque du véhicule.</p>
+                        </div>
+
+                        <div class="lg:col-span-2">
+                            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                                <div class="md:col-span-5">
+                                    <label for="full_name"> Couleur :  {{ form_widget(formEdite.couleur) }}</label>
+                                </div>
+                                <div class="md:col-span-5">
+                                    <label for="full_name"> Marque:  {{ form_widget(formEdite.marque) }}</label>
+                                </div>
+                                <div class="md:col-span-5" hidden>
+                                    {{ form_row(formEdite.idTypeVoiture) }}
+                                </div>
+                                <div class="md:col-span-5 text-right">
+                                    <div class="inline-block mr-2 mt-2">
+                                        <button class="focus:outline-none text-white text-md py-3 px-6 rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg" value={{ form_widget(formEdite.valider) }}</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    {{ form_end(formEdite) }}
+
+
+
+{% endblock %}

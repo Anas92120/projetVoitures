@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+
+
+{% block body %}
+
+
+    {{ form_start (formAjouter) }}
+
+        <div class="relative min-h-screen flex items-center justify-center bg-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center" style="background-image: url(https://www.hdcarwallpapers.com/walls/mini_cooper_s_2021_5k-HD.jpg);">
+            <div class="container max-w-screen-lg mx-auto">
+                <div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-4 px-4 md:p-8 mb-6">
+                        <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+                            <div class="text-gray-600">
+                                <p class="font-medium text-lg">Ajouter du véhicule</p>
+                                <p>Ajouter la couleur ainsi que la marque du véhicule.</p>
+                            </div>
+
+                            <div class="lg:col-span-2">
+                                <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                                    <div class="md:col-span-5">
+
+                                        <label for="full_name"> Couleur : {{ form_widget(formAjouter.couleur) }} </label>
+                                    </div>
+                                    <div class="md:col-span-5">
+                                        <label for="full_name"> Marque : {{ form_widget(formAjouter.marque) }} </label>
+                                    </div>
+                                    <div class="md:col-span-5">
+                                        <label for="full_name"> Type de voiture : {{ form_widget(formAjouter.idTypeVoiture) }} </label>
+                                    </div>
+                                    <div class="md:col-span-5 text-right">
+                                        <div class="inline-flex items-end">
+                                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" value={{ form_widget(formAjouter.valider) }}
+                                            </button>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{ form_end (formAjouter) }}
+{% endblock %}
